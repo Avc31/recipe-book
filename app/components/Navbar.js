@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,6 +17,7 @@ export default function Navbar() {
         <Link href="/" className="text-2xl font-bold">
           Recipe Book
         </Link>
+        {/* <Image></Image> */}
         <div className="md:hidden flex items-center" onClick={toggleMenu}>
           <button className="focus:outline-none">
             {/* Hamburger Icon */}

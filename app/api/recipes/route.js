@@ -40,3 +40,23 @@ export async function POST(req) {
     }
 }
 
+// Handle GET request to retrieve all users
+export async function GET(req) {
+    try {
+        // Connect to the database
+        await connectDb();
+
+        // Retrieve all users from the database
+        const recipes = await Recipe.find(); // Assuming you're using Mongoose
+
+        // Return a success response with the user data
+        return NextResponse.json({ success: true, recipes }, { status: 200 });
+
+    } catch (error) {
+        console.error("Error during GET /api/recipes:", error);
+        return NextResponse.json(
+            { success: false, message: "Server Error: " + error.message },
+            { status: 500 }
+        );
+    }
+}
