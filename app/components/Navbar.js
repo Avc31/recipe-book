@@ -1,4 +1,4 @@
-"use client"; // to ensure it's a client component
+"use client";
 
 import Link from 'next/link';
 import { useState } from 'react';
@@ -65,7 +65,16 @@ export default function Navbar() {
               Add recipe
             </Link>
           </li>
+          <li className="my-2 md:my-0">
+            <Link href="/yourrecipes" className="block px-4 py-2 hover:bg-gray-700 rounded">
+              Your recipes
+            </Link>
+          </li>
         </ul>
+
+        <Link href="/login" className="text-1xl font-bold">
+          Login 
+        </Link>
       </div>
     </nav>
   );

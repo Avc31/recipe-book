@@ -2,6 +2,8 @@
 
 import React from 'react'
 import { useState } from 'react'
+import { ToastContainer, toast, Bounce } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Addrecipe = () => {
 
@@ -34,10 +36,23 @@ const Addrecipe = () => {
 
     setTitle("");
     setDescription("");
+
+    toast.success('Your Recipe added!', {
+      position: "top-center",
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+      });
   }
 
   return (
     <form className='m-20'>
+      <ToastContainer />
       <div className="space-y-12">
         <div className="border-b border-gray-900/10 pb-6">
           <h2 className="text-base font-semibold leading-7 text-gray-900">Profile</h2>
