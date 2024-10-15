@@ -1,15 +1,19 @@
 import connectDb from "@/backend/config/connectDb";
 import User from "@/backend/models/users";
 import { NextResponse } from "next/server";
+import bcrypt from 'bcryptjs';
 
 export async function POST(req) {
     try {
         // Connect to the database
         await connectDb();
+        
 
         // Parse the incoming request body
         const body = await req.json();
         console.log("Incoming body data:", body);
+
+        
 
         const { name, email, password } = body;
 

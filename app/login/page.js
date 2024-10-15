@@ -3,56 +3,74 @@
 import React from 'react'
 import { useState } from 'react';
 import Link from 'next/link';
+import { ToastContainer, toast, Bounce } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Loginpage = () => {
 
-    const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
     const handleChange = (e) => {
-        if (e.target.name == 'name') {
-            setTitle(e.target.value)
-        } else if (e.target.name == 'email') {
-            setDescription(e.target.value)
+        if (e.target.name == 'email') {
+            setEmail(e.target.value)
         } else if (e.target.name == 'password') {
-            setDescription(e.target.value)
+            setPassword(e.target.value)
         }
     }
 
     const onSubmit = async (e) => {
         e.preventDefault();
-        console.log(name, email, password)
+        console.log(email, password)
 
-        const result = await fetch("/api/users", {
+        const result = await fetch("/api/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json", // Ensure data is sent as JSON
             },
-            body: JSON.stringify({ name, email, password }),
+            body: JSON.stringify({ email, password }),
         });
 
         const data = await result.json();
         console.log("API response:", data);
 
-        setTitle("");
-        setDescription("");
 
-        toast.success('Your Recipe added!', {
-            position: "top-center",
-            autoClose: 1000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-            transition: Bounce,
-        });
+
+        if (data.success) {
+            toast.success('Logged in successfully!', {
+                position: "top-center",
+                autoClose: 1000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                transition: Bounce,
+            });
+            // Redirect to the homepage or dashboard
+            // window.location.href = '/dashboard'; // Uncomment and modify if needed
+        } else {
+            toast.error('Invalid email or password', {
+                position: "top-center",
+                autoClose: 1000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                transition: Bounce,
+            });
+        }
+
+        setEmail("");
+        setPassword("");
     }
 
     return (
         <div>
+            <ToastContainer />
             <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
                 <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                     <img
@@ -73,6 +91,8 @@ const Loginpage = () => {
                             </label>
                             <div className="mt-2">
                                 <input
+                                    onChange={handleChange}
+                                    value={email}
                                     id="email"
                                     name="email"
                                     type="email"
@@ -96,6 +116,8 @@ const Loginpage = () => {
                             </div>
                             <div className="mt-2">
                                 <input
+                                    onChange={handleChange}
+                                    value={password}
                                     id="password"
                                     name="password"
                                     type="password"
@@ -108,6 +130,7 @@ const Loginpage = () => {
 
                         <div>
                             <button
+                                onClick={onSubmit}
                                 type="submit"
                                 className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                             >

@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import bcrypt from 'bcryptjs';
 
 const Signup = () => {
 
@@ -24,14 +25,16 @@ const Signup = () => {
 
     const onSubmit = async (e) => {
         e.preventDefault();
-        console.log(name, email, password)
+        const hashedPassword = await bcrypt.hash(password, parseInt(process.env.BCRYPT_SALT));
+
+        console.log(name, email, hashedPassword)
 
         const result = await fetch("/api/users", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json", // Ensure data is sent as JSON
             },
-            body: JSON.stringify({ name, email, password }),
+            body: JSON.stringify({ name, email, password: hashedPassword }),
         });
 
         const data = await result.json();
