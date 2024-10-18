@@ -37,6 +37,7 @@ const Loginpage = () => {
 
 
         if (data.success) {
+            localStorage.setItem('token', data.token)
             toast.success('Logged in successfully!', {
                 position: "top-center",
                 autoClose: 1000,
@@ -50,6 +51,7 @@ const Loginpage = () => {
             });
             // Redirect to the homepage or dashboard
             // window.location.href = '/dashboard'; // Uncomment and modify if needed
+            window.location.href = '/';
         } else {
             toast.error('Invalid email or password', {
                 position: "top-center",

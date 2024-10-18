@@ -1,0 +1,146 @@
+[
+    {
+        "_id": "670e2d51e066b252a9b38243",
+        "title": "Chocolate Cake",
+        "description": "A rich and moist chocolate cake made with cocoa powder and layered with chocolate frosting.",
+        "imgurl": "https://example.com/chocolate_cake.jpg",
+        "createdAt": "2024-10-15T08:52:33.638Z",
+        "__v": 0
+    },
+    {
+        "_id": "670e2dcce066b252a9b38245",
+        "title": "Gulab Jamun",
+        "description": "Soft and syrup-soaked Indian sweet made from khoya, flour, and flavored with cardamom.",
+        "imgurl": "https://example.com/gulab_jamun.jpg",
+        "createdAt": "2024-10-15T08:54:36.346Z",
+        "__v": 0
+    },
+    {
+        "_id": "670e3e9ae066b252a9b3824f",
+        "title": "Fafda Jalebi",
+        "description": "Crispy gram flour snacks served with sweet jalebi, a popular Indian street food combination.",
+        "imgurl": "https://example.com/fafda_jalebi.jpg",
+        "createdAt": "2024-10-15T10:06:18.854Z",
+        "__v": 0
+    },
+    {
+        "_id": "670e3e9ae066b252a9b38250",
+        "title": "Paneer Tikka",
+        "description": "Grilled marinated cubes of paneer served with mint chutney, perfect as an appetizer.",
+        "imgurl": "https://example.com/paneer_tikka.jpg",
+        "createdAt": "2024-10-15T10:30:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "670e3e9ae066b252a9b38251",
+        "title": "Butter Chicken",
+        "description": "Creamy and spiced chicken curry made with butter, cream, and aromatic spices, served with naan.",
+        "imgurl": "https://example.com/butter_chicken.jpg",
+        "createdAt": "2024-10-15T11:00:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "670e3e9ae066b252a9b38252",
+        "title": "Biryani",
+        "description": "A fragrant rice dish layered with marinated chicken, spices, and saffron, often served with raita.",
+        "imgurl": "https://example.com/biryani.jpg",
+        "createdAt": "2024-10-15T11:30:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "670e3e9ae066b252a9b38253",
+        "title": "Rogan Josh",
+        "description": "Slow-cooked lamb or goat curry with aromatic spices, originating from Kashmir.",
+        "imgurl": "https://example.com/rogan_josh.jpg",
+        "createdAt": "2024-10-15T12:00:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "670e3e9ae066b252a9b38254",
+        "title": "Pav Bhaji",
+        "description": "A spicy vegetable mash served with buttered bread rolls, a favorite street food in Mumbai.",
+        "imgurl": "https://example.com/pav_bhaji.jpg",
+        "createdAt": "2024-10-15T12:30:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "670e3e9ae066b252a9b38255",
+        "title": "Aloo Gobi",
+        "description": "A vegetarian dish made with potatoes and cauliflower, flavored with turmeric and spices.",
+        "imgurl": "https://example.com/aloo_gobi.jpg",
+        "createdAt": "2024-10-15T13:00:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "670e3e9ae066b252a9b38256",
+        "title": "Chole Bhature",
+        "description": "Spicy chickpea curry served with deep-fried bread, a popular dish in North India.",
+        "imgurl": "https://example.com/chole_bhature.jpg",
+        "createdAt": "2024-10-15T13:30:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "670e3e9ae066b252a9b38257",
+        "title": "Masala Dosa",
+        "description": "Crispy rice crepes filled with spiced potatoes, served with coconut chutney and sambar.",
+        "imgurl": "https://example.com/masala_dosa.jpg",
+        "createdAt": "2024-10-15T14:00:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "670e3e9ae066b252a9b38258",
+        "title": "Samosa",
+        "description": "Deep-fried pastry filled with spiced potatoes and peas, a popular Indian snack.",
+        "imgurl": "https://example.com/samosa.jpg",
+        "createdAt": "2024-10-15T14:30:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "670e3e9ae066b252a9b38259",
+        "title": "Lassi",
+        "description": "A refreshing yogurt drink, often flavored with mango or rose water, perfect for cooling down.",
+        "imgurl": "https://example.com/lassi.jpg",
+        "createdAt": "2024-10-15T15:00:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "670e3e9ae066b252a9b38260",
+        "title": "Dal Makhani",
+        "description": "Creamy lentil dish cooked with butter and spices, served with rice or naan.",
+        "imgurl": "https://example.com/dal_makhani.jpg",
+        "createdAt": "2024-10-15T15:30:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "670e3e9ae066b252a9b38261",
+        "title": "Palak Paneer",
+        "description": "Spinach curry with paneer cheese, flavored with spices, served with rice or roti.",
+        "imgurl": "https://example.com/palak_paneer.jpg",
+        "createdAt": "2024-10-15T16:00:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "670e3e9ae066b252a9b38262",
+        "title": "Pani Puri",
+        "description": "Crispy hollow puris filled with spiced water, potatoes, and chickpeas, a famous street food.",
+        "imgurl": "https://example.com/pani_puri.jpg",
+        "createdAt": "2024-10-15T16:30:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "670e3e9ae066b252a9b38263",
+        "title": "Methi Thepla",
+        "description": "Spiced flatbread made with fenugreek leaves, served with yogurt or pickles.",
+        "imgurl": "https://example.com/methi_thepla.jpg",
+        "createdAt": "2024-10-15T17:00:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "670e3e9ae066b252a9b38264",
+        "title": "Kheer",
+        "description": "A traditional Indian rice pudding made with milk, sugar, and flavored with cardamom and nuts.",
+        "imgurl": "https://example.com/kheer.jpg",
+        "createdAt": "2024-10-15T17:30:00.000Z",
+        "__v": 0
+    }
+]

@@ -2,6 +2,7 @@ import connectDb from "@/backend/config/connectDb";
 import User from "@/backend/models/users";
 import { NextResponse } from "next/server";
 import bcrypt from 'bcryptjs';
+var jwt = require('jsonwebtoken');
 
 export async function POST(req) {
     try {
@@ -45,8 +46,12 @@ export async function POST(req) {
         }
 
         // If authentication is successful, return a success response
+
+        var token = jwt.sign({ name: user.name, email: user.email }, 'jwtsecret', { expiresIn: '1h' });
+
         return NextResponse.json(
-            { success: true, message: "Login successful!", user: { name: user.name, email: user.email } },
+            // { success: true, message: "Login successful!", user: { name: user.name, email: user.email } },
+            { success: true, token  },
             { status: 200 }
         );
 
