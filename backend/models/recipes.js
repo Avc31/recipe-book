@@ -1,6 +1,9 @@
 import mongoose from 'mongoose';
 
 const recipesSchema = new mongoose.Schema({
+    _id : {
+        type: String,
+    },
     title: {
         type: String,
         required: [true, 'Please enter the name of your recipe'],

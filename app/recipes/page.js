@@ -1,9 +1,12 @@
 import React from 'react'
+import Recipelist from '../components/recipelist'
 
 const Recipes = () => {
   return (
     <div>
-      my recipes
+      <div className="flex flex-wrap" >
+      <Recipelist />
+      </div>
     </div>
   )
 }

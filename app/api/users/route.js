@@ -39,7 +39,7 @@ export async function POST(req) {
         console.error("Error during POST /api/recipes:", error);
         return NextResponse.json(
             { success: false, message: "Server Error: " + error.message },
-            { status: 500 }
+            { status: 500 } 
         );
     }
 }

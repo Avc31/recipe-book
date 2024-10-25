@@ -47,7 +47,7 @@ export async function POST(req) {
 
         // If authentication is successful, return a success response
 
-        var token = jwt.sign({ name: user.name, email: user.email }, 'jwtsecret', { expiresIn: '1h' });
+        var token = jwt.sign({ name: user.name, email: user.email }, process.env.JWTSECRET, { expiresIn: '1h' });
 
         return NextResponse.json(
             // { success: true, message: "Login successful!", user: { name: user.name, email: user.email } },
