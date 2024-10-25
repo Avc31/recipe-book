@@ -1,6 +1,7 @@
 import connectDb from "@/backend/config/connectDb";
 import Recipe from "@/backend/models/recipes";
 import { NextResponse } from "next/server";
+import mongoose from "mongoose";
 
 export async function GET(req, { params }) {
     try {
@@ -9,7 +10,8 @@ export async function GET(req, { params }) {
         const { id } = params;
 
 
-        const recipe = await Recipe.findById(id);
+        //const recipe = await Recipe.findById(id);
+        const recipe = await Recipe.findById(new mongoose.Types.ObjectId(id));
 
         if (!recipe) {
             console.error("Recipe not found in DB");

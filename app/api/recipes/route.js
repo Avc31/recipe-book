@@ -11,10 +11,10 @@ export async function POST(req) {
         const body = await req.json();
         console.log("Incoming body data:", body);
 
-        const { title, description, imgurl } = body;
+        const { title, description, fullRecipe, imgurl } = body;
 
         // Check if all required fields are provided
-        if (!title || !description || !imgurl) {
+        if (!title || !description || !fullRecipe || !imgurl ) {
             return NextResponse.json(
                 { success: false, message: "Please provide all required fields." },
                 { status: 400 }
@@ -25,6 +25,7 @@ export async function POST(req) {
         const newRecipe = await Recipe.create({
             title,
             description,
+            fullRecipe,
             imgurl,
         });
 
