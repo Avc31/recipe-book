@@ -1,16 +1,56 @@
 "use client";
 
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { jwtDecode } from "jwt-decode";
+import { useRouter } from 'next/navigation';
 
 const Addrecipe = () => {
 
+  const router = useRouter();
   const [title, setTitle] = useState("")
   const [description, setDescription] = useState("")
   const [fullRecipe, setfullRecipe] = useState("")
   const [imgurl, setImgurl] = useState("")
+  const [user, setUser] = useState(null);
+  const [error, setError] = useState(null);
+  const [userName, setuserName] = useState("");
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        const token = localStorage.getItem("token");
+
+        // if (!token) throw new Error("No token found");
+
+        if (!token) {
+          router.push('/login');
+          return;
+        }
+
+        const decodedToken = jwtDecode(token);
+        const loggedInUserEmail = decodedToken.email;
+
+        const response = await fetch("/api/users");
+        if (!response.ok) throw new Error("Failed to fetch user data");
+
+        const data = await response.json();
+        const currentUser = data.users.find(user => user.email === loggedInUserEmail);
+        if (currentUser) {
+          setUser(currentUser);
+          setuserName(currentUser.name)
+        } else {
+          throw new Error("User not found");
+        }
+      } catch (err) {
+        setError(err.message);
+      }
+    };
+
+    fetchUserData();
+  }, []);
 
   const handleChange = (e) => {
     if (e.target.name == 'title') {
@@ -26,18 +66,15 @@ const Addrecipe = () => {
 
   const onSubmit = async (e) =>{
     e.preventDefault();
-    console.log(title, description, fullRecipe, imgurl)
-
+    
     const result = await fetch("/api/recipes", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json", // Ensure data is sent as JSON
+        "Content-Type": "application/json", 
       },
-      body: JSON.stringify({ title, description, imgurl, fullRecipe }),
+      body: JSON.stringify({ title, description, imgurl, fullRecipe, userName }),
     });
-
     const data = await result.json();
-    console.log("API response:", data);
 
     setTitle("");
     setDescription("");
@@ -56,6 +93,9 @@ const Addrecipe = () => {
       transition: Bounce,
       });
   }
+
+  if (error) return <p className="text-red-500">{error}</p>;
+  if (!user) return <p>Loading...</p>;
 
   return (
     <form className='m-20'>

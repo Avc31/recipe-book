@@ -21,10 +21,14 @@ const recipesSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Please enter the image URL of your recipe'],
     },
+    userName: {
+        type: String,
+        required: [true, 'get username'],
+    },
     createdAt: {
         type: Date,
         default: Date.now, // Automatically add a creation date
-    },
+    }
 });
 
 // Export the model, or use the existing one if already compiled

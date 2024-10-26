@@ -1,92 +1,154 @@
-[
-    {
-        "_id": "670e2d51e066b252a9b38243",
-        "title": "Chocolate Cake",
-        "description": "A rich and moist chocolate cake made with cocoa powder and layered with chocolate frosting.",
-        "fullRecipe": "1. Preheat oven to 350°F (175°C). Grease and flour two 9-inch round baking pans.\n2. In a bowl, mix 1 and 3/4 cups flour, 3/4 cup cocoa powder, 1 and 1/2 cups sugar, 1 and 1/2 tsp baking powder, and 1/2 tsp salt.\n3. Add 2 large eggs, 1 cup milk, 1/2 cup vegetable oil, and 2 tsp vanilla extract; mix until smooth.\n4. Divide batter into pans, bake for 30-35 minutes.\n5. Cool, then frost with chocolate frosting.",
-        "imgurl": "https://example.com/chocolate_cake.jpg",
-        "createdAt": "2024-10-15T08:52:33.638Z",
-        "__v": 0
+[{
+    "_id": {
+      "$oid": "670e2dcce066b252a9b38245"
     },
-    {
-        "_id": "670e2dcce066b252a9b38245",
-        "title": "Gulab Jamun",
-        "description": "Soft and syrup-soaked Indian sweet made from khoya, flour, and flavored with cardamom.",
-        "fullRecipe": "1. Mix 1 cup khoya, 2 tbsp flour, and a pinch of baking soda; knead into soft dough.\n2. Shape dough into small balls.\n3. Heat oil in a pan, fry balls on low heat until golden.\n4. In another pan, make syrup with 1 cup sugar and 1 cup water, adding cardamom.\n5. Soak fried balls in syrup for 2 hours before serving.",
-        "imgurl": "https://example.com/gulab_jamun.jpg",
-        "createdAt": "2024-10-15T08:54:36.346Z",
-        "__v": 0
+    "title": "Gulab Jamun",
+    "description": "Soft and syrup-soaked Indian sweet made from khoya, flour, and flavored with cardamom.",
+    "fullRecipe": "1. Mix 1 cup khoya, 2 tbsp flour, and a pinch of baking soda; knead into soft dough.\n2. Shape dough into small balls.\n3. Heat oil in a pan, fry balls on low heat until golden.\n4. In another pan, make syrup with 1 cup sugar and 1 cup water, adding cardamom.\n5. Soak fried balls in syrup for 2 hours before serving.",
+    "imgurl": "https://media.istockphoto.com/id/1424509973/photo/gulab-jamun-an-indian-dessert.jpg?s=1024x1024&w=is&k=20&c=7N41F9E1WoDwa1RdoJKzblqtC9Ah6pcPMNuvirNH30g=",
+    "userName": "Avesh Dabhoiwala",
+    "createdAt": {
+      "$date": "2024-10-15T08:54:36.346Z"
     },
-    {
-        "_id": "670e3e9ae066b252a9b3824f",
-        "title": "Fafda Jalebi",
-        "description": "Crispy gram flour snacks served with sweet jalebi, a popular Indian street food combination.",
-        "fullRecipe": "1. Mix 1 cup gram flour, 1/4 tsp carom seeds, salt, and 1 tsp oil; knead into dough.\n2. Roll small portions into thin strips and fry until golden.\n3. For jalebi, make a batter with 1/2 cup flour, 1/4 tsp baking soda, and water; let sit for 1 hour.\n4. Pipe batter into hot oil in spiral shape, fry until crisp.\n5. Dip fried jalebis in sugar syrup.",
-        "imgurl": "https://example.com/fafda_jalebi.jpg",
-        "createdAt": "2024-10-15T10:06:18.854Z",
-        "__v": 0
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "670e3e9ae066b252a9b38250"
     },
-    {
-        "_id": "670e3e9ae066b252a9b38250",
-        "title": "Paneer Tikka",
-        "description": "Grilled marinated cubes of paneer served with mint chutney, perfect as an appetizer.",
-        "fullRecipe": "1. Mix 1/2 cup yogurt, 1 tbsp lemon juice, 1 tsp ginger-garlic paste, salt, and spices.\n2. Add 1-inch paneer cubes, coat well, marinate for 30 mins.\n3. Skewer paneer, grill on high for 5 mins each side.\n4. Serve hot with mint chutney.",
-        "imgurl": "https://example.com/paneer_tikka.jpg",
-        "createdAt": "2024-10-15T10:30:00.000Z",
-        "__v": 0
+    "title": "Paneer Tikka",
+    "description": "Grilled marinated cubes of paneer served with mint chutney, perfect as an appetizer.",
+    "fullRecipe": "1. Mix 1/2 cup yogurt, 1 tbsp lemon juice, 1 tsp ginger-garlic paste, salt, and spices.\n2. Add 1-inch paneer cubes, coat well, marinate for 30 mins.\n3. Skewer paneer, grill on high for 5 mins each side.\n4. Serve hot with mint chutney.",
+    "imgurl": "https://images.unsplash.com/photo-1666001120694-3ebe8fd207be?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "userName": "Avesh Dabhoiwala",
+    "createdAt": {
+      "$date": "2024-10-15T10:30:00.000Z"
     },
-    {
-        "_id": "670e3e9ae066b252a9b38251",
-        "title": "Butter Chicken",
-        "description": "Creamy and spiced chicken curry made with butter, cream, and aromatic spices, served with naan.",
-        "fullRecipe": "1. Marinate chicken in yogurt, salt, and spices for 1 hour.\n2. Grill or pan-fry until cooked.\n3. In a pan, heat 2 tbsp butter, cook onions and tomatoes until soft.\n4. Add cream and spices, simmer for 5 mins.\n5. Add cooked chicken and simmer for another 10 mins.",
-        "imgurl": "https://example.com/butter_chicken.jpg",
-        "createdAt": "2024-10-15T11:00:00.000Z",
-        "__v": 0
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "670e3e9ae066b252a9b38252"
     },
-    {
-        "_id": "670e3e9ae066b252a9b38252",
-        "title": "Biryani",
-        "description": "A fragrant rice dish layered with marinated chicken, spices, and saffron, often served with raita.",
-        "fullRecipe": "1. Marinate chicken with yogurt, spices, and herbs.\n2. Cook basmati rice with saffron and spices until 90% done.\n3. Layer chicken and rice in a pot, top with fried onions and herbs.\n4. Cook on low heat for 20 mins.\n5. Serve hot with raita.",
-        "imgurl": "https://example.com/biryani.jpg",
-        "createdAt": "2024-10-15T11:30:00.000Z",
-        "__v": 0
+    "title": "Biryani",
+    "description": "A fragrant rice dish layered with marinated chicken, spices, and saffron, often served with raita.",
+    "fullRecipe": "1. Marinate chicken with yogurt, spices, and herbs.\n2. Cook basmati rice with saffron and spices until 90% done.\n3. Layer chicken and rice in a pot, top with fried onions and herbs.\n4. Cook on low heat for 20 mins.\n5. Serve hot with raita.",
+    "imgurl": "https://plus.unsplash.com/premium_photo-1694141251673-1758913ade48?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "userName": "Avesh Dabhoiwala",
+    "createdAt": {
+      "$date": "2024-10-15T11:30:00.000Z"
     },
-    {
-        "_id": "670e3e9ae066b252a9b38253",
-        "title": "Rogan Josh",
-        "description": "Slow-cooked lamb or goat curry with aromatic spices, originating from Kashmir.",
-        "fullRecipe": "1. Heat oil, cook onions until golden.\n2. Add lamb or goat and spices, cook until browned.\n3. Add yogurt and simmer for 1-2 hours until meat is tender.\n4. Serve hot with rice or naan.",
-        "imgurl": "https://example.com/rogan_josh.jpg",
-        "createdAt": "2024-10-15T12:00:00.000Z",
-        "__v": 0
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "670e3e9ae066b252a9b38256"
     },
-    {
-        "_id": "670e3e9ae066b252a9b38254",
-        "title": "Pav Bhaji",
-        "description": "A spicy vegetable mash served with buttered bread rolls, a favorite street food in Mumbai.",
-        "fullRecipe": "1. Boil and mash potatoes, peas, and carrots.\n2. Heat butter, cook onions, add ginger-garlic paste, tomatoes, and spices.\n3. Add mashed veggies, cook until blended.\n4. Serve with buttered pav.",
-        "imgurl": "https://example.com/pav_bhaji.jpg",
-        "createdAt": "2024-10-15T12:30:00.000Z",
-        "__v": 0
+    "title": "Idli Sambar",
+    "description": "Steamed rice cakes served with a tangy lentil stew, popular in South India.",
+    "fullRecipe": "1. Soak rice and urad dal, grind into a batter, ferment overnight.\n2. Pour batter into molds, steam for 10 mins to make idlis.\n3. Make sambar with lentils, vegetables, and spices.\n4. Serve hot with idlis and coconut chutney.",
+    "imgurl": "https://images.unsplash.com/photo-1626264966648-8a7c971c48d2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "userName": "Avesh Dabhoiwala",
+    "createdAt": {
+      "$date": "2024-10-15T13:30:00.000Z"
     },
-    {
-        "_id": "670e3e9ae066b252a9b38255",
-        "title": "Aloo Gobi",
-        "description": "A vegetarian dish made with potatoes and cauliflower, flavored with turmeric and spices.",
-        "fullRecipe": "1. Heat oil, add cumin seeds.\n2. Add chopped potatoes and cauliflower, stir-fry with spices.\n3. Cover and cook until tender.\n4. Serve hot with roti or rice.",
-        "imgurl": "https://example.com/aloo_gobi.jpg",
-        "createdAt": "2024-10-15T13:00:00.000Z",
-        "__v": 0
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "670e3e9ae066b252a9b3824f"
     },
-    {
-        "_id": "670e3e9ae066b252a9b38256",
-        "title": "Chole Bhature",
-        "description": "Spicy chickpea curry served with deep-fried bread, a popular dish in North India.",
-        "fullRecipe": "1. Soak chickpeas overnight, boil with salt.\n2. Cook onions, tomatoes, and spices in a pan, add boiled chickpeas.\n3. Simmer for 20 mins.\n4. For bhature, make dough with flour and yogurt, roll and fry.",
-        "imgurl": "https://example.com/chole_bhature.jpg",
-        "createdAt": "2024-10-15T13:30:00.000Z",
-        "__v": 0
-    }
-]
+    "title": "Fafda Jalebi",
+    "description": "Crispy gram flour snacks served with sweet jalebi, a popular Indian street food combination.",
+    "fullRecipe": "1. Mix 1 cup gram flour, 1/4 tsp carom seeds, salt, and 1 tsp oil; knead into dough.\n2. Roll small portions into thin strips and fry until golden.\n3. For jalebi, make a batter with 1/2 cup flour, 1/4 tsp baking soda, and water; let sit for 1 hour.\n4. Pipe batter into hot oil in spiral shape, fry until crisp.\n5. Dip fried jalebis in sugar syrup.",
+    "imgurl": "https://media.istockphoto.com/id/1292639530/photo/fafda-famous-snack-from-gujarat-india-served-over-a-rustic-wooden-background-selective-focus.jpg?s=1024x1024&w=is&k=20&c=wR-2t2EQ5uSNDPAYUWeZJrayvFHgddFpmIXsA4zFyvM=",
+    "userName": "Avesh Dabhoiwala",
+    "createdAt": {
+      "$date": "2024-10-15T10:06:18.854Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "670e3e9ae066b252a9b38253"
+    },
+    "title": "Rogan Josh",
+    "description": "Slow-cooked lamb or goat curry with aromatic spices, originating from Kashmir.",
+    "fullRecipe": "1. Heat oil, cook onions until golden.\n2. Add lamb or goat and spices, cook until browned.\n3. Add yogurt and simmer for 1-2 hours until meat is tender.\n4. Serve hot with rice or naan.",
+    "imgurl": "https://media.istockphoto.com/id/1253934130/photo/mutton-masala-curry-in-plastic-container-for-home-delivery.jpg?s=1024x1024&w=is&k=20&c=jmEkMlBqDm_g6GebMr0rPVllP2HOj7MmycSeMPPD8Mg=",
+    "userName": "Avesh Dabhoiwala",
+    "createdAt": {
+      "$date": "2024-10-15T12:00:00.000Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "670e3e9ae066b252a9b38251"
+    },
+    "title": "Butter Chicken",
+    "description": "Creamy and spiced chicken curry made with butter, cream, and aromatic spices, served with naan.",
+    "fullRecipe": "1. Marinate chicken in yogurt, salt, and spices for 1 hour.\n2. Grill or pan-fry until cooked.\n3. In a pan, heat 2 tbsp butter, cook onions and tomatoes until soft.\n4. Add cream and spices, simmer for 5 mins.\n5. Add cooked chicken and simmer for another 10 mins.",
+    "imgurl": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "userName": "Avesh Dabhoiwala",
+    "createdAt": {
+      "$date": "2024-10-15T11:00:00.000Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "670e3e9ae066b252a9b38254"
+    },
+    "title": "Pav Bhaji",
+    "description": "A spicy vegetable mash served with buttered bread rolls, a favorite street food in Mumbai.",
+    "fullRecipe": "1. Boil and mash vegetables (potatoes, peas, cauliflower).\n2. Cook onions, tomatoes, spices until soft.\n3. Add mashed vegetables and simmer for 15 mins.\n4. Serve hot with buttered pav (bread rolls).",
+    "imgurl": "https://images.unsplash.com/photo-1625217870612-881a76c9b3c2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "userName": "Avesh Dabhoiwala",
+    "createdAt": {
+      "$date": "2024-10-15T12:30:00.000Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "670e3e9ae066b252a9b38255"
+    },
+    "title": "Masala Dosa",
+    "description": "A thin, crispy rice crepe filled with a spiced potato filling, served with coconut chutney and sambar.",
+    "fullRecipe": "1. Soak rice and urad dal, grind into a batter, ferment overnight.\n2. Make potato filling with spices and onions.\n3. Spread batter thin on a hot griddle, cook until crisp.\n4. Add filling, fold and serve with chutney and sambar.",
+    "imgurl": "https://media.istockphoto.com/id/1473170566/photo/indian-food-masala-dosa.jpg?s=1024x1024&w=is&k=20&c=qHjkzMr8yKP6WWI3FtpFK31E9HBW2uIadklsmBGyb5A=",
+    "userName": "Avesh Dabhoiwala",
+    "createdAt": {
+      "$date": "2024-10-15T13:00:00.000Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "670e2d51e066b252a9b38243"
+    },
+    "title": "Chocolate Cake",
+    "description": "A rich and moist chocolate cake made with cocoa powder and layered with chocolate frosting.",
+    "fullRecipe": "1. Preheat oven to 350°F (175°C). Grease and flour two 9-inch round baking pans.\n2. In a bowl, mix 1 and 3/4 cups flour, 3/4 cup cocoa powder, 1 and 1/2 cups sugar, 1 and 1/2 tsp baking powder, and 1/2 tsp salt.\n3. Add 2 large eggs, 1 cup milk, 1/2 cup vegetable oil, and 2 tsp vanilla extract; mix until smooth.\n4. Divide batter into pans, bake for 30-35 minutes.\n5. Cool, then frost with chocolate frosting.",
+    "imgurl": "https://plus.unsplash.com/premium_photo-1715015440855-7d95cf92608a?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "userName": "Avesh Dabhoiwala",
+    "createdAt": {
+      "$date": "2024-10-15T08:52:33.638Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "671ba915770c0b6fddb0181f"
+    },
+    "title": "Aloo Paratha",
+    "description": "Indian flatbread stuffed with a spicy potato filling, served with yogurt and pickles.",
+    "fullRecipe": "1. Mix boiled and mashed potatoes with chopped onions, green chilies, coriander, and spices.\\n2. Roll out dough into small circles, place filling in the center.\\n3. Seal and roll again gently.\\n4. Cook on a hot griddle with butter until golden brown on both sides.\\n5. Serve hot with yogurt or pickle.",
+    "imgurl": "https://media.istockphoto.com/id/1251342017/photo/aloo-paratha-or-stuffed-potato-flatbread-with-curd-white-butter-and-mango-pickles.jpg?s=1024x1024&w=is&k=20&c=ntgeg0LQmcnPIg6OKek8RAXCPi7KlQ-jkXlQRDXYqs4=",
+    "userName": "Avesh Dabhoiwala",
+    "createdAt": {
+      "$date": "2024-10-25T14:20:05.903Z"
+    },
+    "__v": 0
+  }]

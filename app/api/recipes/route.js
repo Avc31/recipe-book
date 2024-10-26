@@ -9,12 +9,11 @@ export async function POST(req) {
 
         // Parse the incoming request body
         const body = await req.json();
-        console.log("Incoming body data:", body);
 
-        const { title, description, fullRecipe, imgurl } = body;
+        const { title, description, fullRecipe, imgurl, userName } = body;
 
         // Check if all required fields are provided
-        if (!title || !description || !fullRecipe || !imgurl ) {
+        if (!title || !description || !fullRecipe || !imgurl || !userName ) {
             return NextResponse.json(
                 { success: false, message: "Please provide all required fields." },
                 { status: 400 }
@@ -27,13 +26,13 @@ export async function POST(req) {
             description,
             fullRecipe,
             imgurl,
+            userName,
         });
 
         // Return a success response with the new recipe
         return NextResponse.json({ success: true, recipe: newRecipe }, { status: 201 });
 
     } catch (error) {
-        console.error("Error during POST /api/recipes:", error);
         return NextResponse.json(
             { success: false, message: "Server Error: " + error.message },
             { status: 500 }
@@ -54,7 +53,6 @@ export async function GET(req) {
         return NextResponse.json({ success: true, recipes }, { status: 200 });
 
     } catch (error) {
-        console.error("Error during GET /api/recipes:", error);
         return NextResponse.json(
             { success: false, message: "Server Error: " + error.message },
             { status: 500 }

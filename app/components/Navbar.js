@@ -66,8 +66,8 @@ export default function Navbar() {
         {dropdown &&
           <div className="absolute right-12 bg-gray-500 top-12 py-4 rounded-md px-5 w-32">
             <ul>
-              <li className="py-1 hover:text-black text-sm">My Account</li>
-              <li className="py-1 hover:text-black text-sm">My Recipes</li>
+            <Link href="/myaccount"><li className="py-1 hover:text-black text-sm">My Account</li></Link>
+            <Link href="/yourrecipes"><li className="py-1 hover:text-black text-sm">My Recipes</li></Link>
               <a onClick={logout}><li className="py-1 hover:text-black text-sm">LogOut</li></a>
             </ul>
           </div>

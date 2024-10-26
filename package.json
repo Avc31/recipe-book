@@ -12,6 +12,7 @@
     "bar": "^0.1.2",
     "bcryptjs": "^2.4.3",
     "jsonwebtoken": "^9.0.2",
+    "jwt-decode": "^4.0.0",
     "loading": "^1.13.3",
     "mongoose": "^8.7.1",
     "next": "14.2.15",
