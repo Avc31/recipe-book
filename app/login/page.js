@@ -77,10 +77,10 @@ const Loginpage = () => {
                 <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                     <img
                         alt="recipe book"
-                        src=""
-                        className="mx-auto h-10 w-auto"
+                        src="../icon.png"
+                        className="mx-auto h-12 w-auto"
                     />
-                    <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+                    <h2 className="mt-5 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
                         Sign in to your account
                     </h2>
                 </div>
@@ -100,7 +100,7 @@ const Loginpage = () => {
                                     type="email"
                                     required
                                     autoComplete="email"
-                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-600 sm:text-sm sm:leading-6"
                                 />
                             </div>
                         </div>
@@ -111,7 +111,7 @@ const Loginpage = () => {
                                     Password
                                 </label>
                                 <div className="text-sm">
-                                    <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
+                                    <a href="#" className="font-semibold text-yellow-600 hover:text-yellow-500">
                                         Forgot password?
                                     </a>
                                 </div>
@@ -125,7 +125,7 @@ const Loginpage = () => {
                                     type="password"
                                     required
                                     autoComplete="current-password"
-                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                    className="block w-full rounded-md border-0 py-1.5 text-yellow-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-600 sm:text-sm sm:leading-6"
                                 />
                             </div>
                         </div>
@@ -134,7 +134,7 @@ const Loginpage = () => {
                             <button
                                 onClick={onSubmit}
                                 type="submit"
-                                className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                className="flex w-full justify-center rounded-md bg-yellow-700 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-yellow-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600"
                             >
                                 Sign in
                             </button>
@@ -143,7 +143,7 @@ const Loginpage = () => {
 
                     <p className="mt-10 text-center text-sm text-gray-500">
                         Not a member?{' '}
-                        <Link href="/signup" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+                        <Link href="/signup" className="font-semibold leading-6 hover:text-yellow-500">
                             create a new account
                         </Link>
                     </p>

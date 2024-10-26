@@ -2,9 +2,9 @@ import React from 'react';
 
 const About = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-gray-50">
+    <div className="flex flex-col items-center justify-center min-h-screen p-6 ">
       <div className="max-w-4xl w-full bg-white shadow-md rounded-lg p-8">
-        <h1 className="text-3xl font-bold mb-6 text-center text-indigo-600">
+        <h1 className="text-3xl font-bold mb-6 text-center text-yellow-800">
           About RecipeBook
         </h1>
         <p className="text-lg text-gray-700 mb-4">
