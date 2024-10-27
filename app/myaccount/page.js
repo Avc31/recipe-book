@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { jwtDecode } from "jwt-decode";
+import LoadingIcons from "react-loading-icons";
 
 const page = () => {
   const [user, setUser] = useState(null);
@@ -35,7 +36,7 @@ const page = () => {
   }, []);
 
   if (error) return <p className="text-red-500">{error}</p>;
-  if (!user) return <p>Loading...</p>;
+  if (!user) return <p className="w-full text-center flex justify-center mt-12"><LoadingIcons.SpinningCircles className="" fill="#ca8a04" /></p>;
 
   return (
     <div className="account-details p-4 bg-gray-100 rounded shadow-lg">
@@ -43,7 +44,7 @@ const page = () => {
       <p><strong>Name:</strong> {user.name}</p>
       <p><strong>Email:</strong> {user.email}</p>
       <button
-        className="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
+        className="mt-4 px-4 py-2 bg-yellow-500 text-white rounded"
         onClick={() => alert("Edit functionality can go here!")}
       >
         Edit Details

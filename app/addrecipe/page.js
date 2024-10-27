@@ -118,7 +118,7 @@ const Addrecipe = () => {
       name="title"
       type="text"
       placeholder="Enter recipe title"
-      className="mt-2 w-full border border-gray-300 rounded-lg py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+      className="mt-2 w-full border border-gray-300 rounded-lg py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500"
     />
   </div>
 
@@ -131,7 +131,7 @@ const Addrecipe = () => {
       name="imgurl"
       type="text"
       placeholder="Enter image URL"
-      className="mt-2 w-full border border-gray-300 rounded-lg py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+      className="mt-2 w-full border border-gray-300 rounded-lg py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500"
     />
   </div>
 
@@ -144,7 +144,7 @@ const Addrecipe = () => {
       name="description"
       placeholder="Enter a short description of the recipe"
       rows="3"
-      className="mt-2 w-full border border-gray-300 rounded-lg py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+      className="mt-2 w-full border border-gray-300 rounded-lg py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500"
     ></textarea>
   </div>
 
@@ -157,7 +157,7 @@ const Addrecipe = () => {
       name="fullRecipe"
       placeholder="Enter the full recipe details"
       rows="5"
-      className="mt-2 w-full border border-gray-300 rounded-lg py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+      className="mt-2 w-full border border-gray-300 rounded-lg py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500"
     ></textarea>
   </div>
 
@@ -165,7 +165,7 @@ const Addrecipe = () => {
   <div className="flex justify-center mt-8">
     <button
       onClick={onSubmit}
-      className="bg-yellow-700 text-white font-semibold py-2 px-6 rounded-lg hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+      className="bg-yellow-700 text-white font-semibold py-2 px-6 rounded-lg hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-500"
     >
       Submit Recipe
     </button>

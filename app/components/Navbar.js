@@ -53,7 +53,7 @@ export default function Navbar() {
         <div className="hidden md:flex md:items-center md:space-x-4">
           <Link href="/" className="px-4 py-2 hover:bg-yellow-700 rounded">Home</Link>
           <Link href="/recipes" className="px-4 py-2 hover:bg-yellow-700 rounded">Recipes</Link>
-          <Link href="/addrecipe" className="px-4 py-2 hover:bg-yellow-700 rounded">Add Recipe</Link>
+          <Link href="/addrecipe" className="px-4 py-2 hover:bg-yellow-700 rounded">Add a Recipe</Link>
           <Link href="/yourrecipes" className="px-4 py-2 hover:bg-yellow-700 rounded">Your Recipes</Link>
           <Link href="/about" className="px-4 py-2 hover:bg-yellow-700 rounded">About</Link>
         </div>
