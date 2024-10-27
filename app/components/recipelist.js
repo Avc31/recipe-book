@@ -2,10 +2,12 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import LoadingIcons from "react-loading-icons";
 
 const Recipelist = () => {
     const [recipes, setRecipes] = useState([]);
     const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchRecipes = async () => {
@@ -18,11 +20,15 @@ const Recipelist = () => {
                 setRecipes(data.recipes);
             } catch (err) {
                 setError(err.message);
+            } finally {
+                setLoading(false);
             }
         };
 
         fetchRecipes();
     }, []);
+
+    if (loading) return <p className="w-full text-center flex justify-center mt-12"><LoadingIcons.SpinningCircles className="" fill="#ca8a04" /></p>;
 
     return (
         <>

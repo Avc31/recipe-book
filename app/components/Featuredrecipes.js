@@ -2,11 +2,13 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import LoadingIcons from "react-loading-icons";
 
 const Featuredrecipes = () => {
     const [recipes, setRecipes] = useState([]);
     const [error, setError] = useState(null);
     const [todaysRecipes, setTodaysRecipes] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchRecipes = async () => {
@@ -23,6 +25,8 @@ const Featuredrecipes = () => {
             } catch (err) {
                 setError(err.message);
                 console.error("Error fetching recipes:", err);
+            } finally {
+                setLoading(false); 
             }
         };
 
@@ -37,7 +41,7 @@ const Featuredrecipes = () => {
             } else {
                 // Select two random recipes and cache them
                 const shuffledRecipes = recipes.sort(() => 0.5 - Math.random());
-                const selectedRecipes = shuffledRecipes.slice(0, 2);
+                const selectedRecipes = shuffledRecipes.slice(0, 3);
                 setTodaysRecipes(selectedRecipes);
                 localStorage.setItem("today", today);
                 localStorage.setItem("todaysRecipes", JSON.stringify(selectedRecipes));
@@ -46,6 +50,8 @@ const Featuredrecipes = () => {
 
         fetchRecipes();
     }, []);
+
+    if (loading) return <p><LoadingIcons.SpinningCircles className="" fill="#ca8a04" /></p>;
 
 
     return (

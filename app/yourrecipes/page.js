@@ -4,12 +4,14 @@ import { useState, useEffect } from 'react';
 import { jwtDecode } from "jwt-decode";
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import LoadingIcons from 'react-loading-icons';
 
 const UserRecipes = () => {
   const [recipes, setRecipes] = useState([]);
   const [error, setError] = useState(null);
   const [user, setUser] = useState(null);
   const [userName, setUserName] = useState("");
+  const [loading, setLoading] = useState(true);
   const router = useRouter();
 
   useEffect(() => {
@@ -60,6 +62,8 @@ const UserRecipes = () => {
           setRecipes(data.recipes);
         } catch (err) {
           setError(err.message);
+        } finally {
+          setLoading(false);
         }
       };
 
@@ -67,7 +71,10 @@ const UserRecipes = () => {
     }
   }, [userName]);
 
+  if (loading) return <p className="w-full text-center flex justify-center mt-12"><LoadingIcons.SpinningCircles className="" fill="#ca8a04" /></p>;
+
   if (error) return <p className="text-red-500">{error}</p>;
+
   if (!recipes.length) return <p>You have not uploaded any recipes so far.</p>;
 
   return (

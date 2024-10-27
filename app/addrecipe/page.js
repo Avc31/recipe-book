@@ -6,6 +6,7 @@ import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { jwtDecode } from "jwt-decode";
 import { useRouter } from 'next/navigation';
+import LoadingIcons from 'react-loading-icons';
 
 const Addrecipe = () => {
 
@@ -17,6 +18,7 @@ const Addrecipe = () => {
   const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
   const [userName, setuserName] = useState("");
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -46,6 +48,8 @@ const Addrecipe = () => {
         }
       } catch (err) {
         setError(err.message);
+      } finally {
+
       }
     };
 
@@ -95,7 +99,7 @@ const Addrecipe = () => {
   }
 
   if (error) return <p className="text-red-500">{error}</p>;
-  if (!user) return <p>Loading...</p>;
+  if (!user) return <p className="w-full text-center flex justify-center mt-12"><LoadingIcons.SpinningCircles className="" fill="#ca8a04" /></p>;
 
   return (
     <form className="max-w-3xl mx-auto my-16 p-8 bg-white shadow-lg rounded-lg space-y-8">
