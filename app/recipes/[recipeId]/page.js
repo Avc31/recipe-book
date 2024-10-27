@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import LoadingIcons from 'react-loading-icons';
 import { jwtDecode } from 'jwt-decode';
 import { useRouter } from 'next/navigation';
+import { CiEdit } from "react-icons/ci";
 
 const page = ({ params }) => {
 
@@ -107,6 +108,9 @@ const page = ({ params }) => {
         return <div className="text-center py-10">Recipe not found</div>;
     }
 
+    const userReview = reviews.find((rev) => rev.reviewer === userName);
+    const otherReviews = reviews.filter((rev) => rev.reviewer !== userName);
+
     const formattedDate = new Date(recipe.createdAt).toLocaleDateString(undefined, {
         year: 'numeric',
         month: 'long',
@@ -118,11 +122,11 @@ const page = ({ params }) => {
         const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-based
         const day = String(date.getDate()).padStart(2, '0');
         const year = date.getFullYear();
-    
+
         return `${month}/${day}/${year}`;
     };
-    
-    
+
+
 
     // Average rating and review count
     const reviewCount = reviews.length;
@@ -153,7 +157,7 @@ const page = ({ params }) => {
                             ))}
                         </div>
                     </div>
-                    <img src={recipe.imgurl || "https://placehold.co/600x400/EEE/31343C"} alt={recipe.title} className="w-full h-64 object-cover rounded-md mb-4" onError={(e) => { e.target.src = "https://placehold.co/600x400/EEE/31343C"; }}/>
+                    <img src={recipe.imgurl || "https://placehold.co/600x400/EEE/31343C"} alt={recipe.title} className="w-full h-64 object-cover rounded-md mb-4" onError={(e) => { e.target.src = "https://placehold.co/600x400/EEE/31343C"; }} />
                     <p className="text-gray-700 text-lg">{recipe.fullRecipe}</p>
                     <div className="mt-6 text-gray-600">
                         <p>
@@ -197,37 +201,63 @@ const page = ({ params }) => {
                                 <button type="submit" className="bg-yellow-500 text-white py-2 px-4 rounded">Submit Review</button>
                             </form>
                         ) : (
-                            <div className="text-green-600 mt-4">
-                                <p>Your review has been submitted. Thank you for your feedback!</p>
+                            // <div className="text-green-600 mt-4">
+                            //     <p>Your review has been submitted. Thank you for your feedback!</p>
+                            // </div>
+                            <div className="border border-gray-300 p-4 rounded-md relative bg-gray-50 shadow-md mb-4 mt-4">
+                                {/* Edit button at top right */}
+                                <button
+                                    className="absolute top-2 right-2 text-sm text-blue-500 hover:text-blue-700 focus:outline-none"
+                                      // Add your edit function here
+                                >
+                                    <CiEdit className='text-yellow-500' size={30}></CiEdit>
+                                </button>
+
+                                <div className="font-bold mb-2">My Review</div>
+                                <div className="flex items-center mb-2">
+                                    {[...Array(5)].map((_, i) => (
+                                        <svg
+                                            key={i}
+                                            fill={i < userReview.rating ? "#ca8a04" : "gray"}
+                                            viewBox="0 0 24 24"
+                                            className="w-5 h-5"
+                                        >
+                                            <path d="M12 .587l3.668 7.431 8.206 1.185-5.934 5.565 1.401 8.185L12 18.897l-7.341 3.85 1.401-8.185-5.934-5.565 8.206-1.185L12 .587z" />
+                                        </svg>
+                                    ))}
+                                    <span className='ml-2 text-sm pt-0'>{formatDate(userReview.createdAt)}</span>
+                                </div>
+
+                                <p>{userReview.comment}</p>
                             </div>
+
                         )}
 
 
                         {/* Display Reviews */}
                         <div className="mt-6">
                             <h2 className="text-2xl font-bold mb-4">Reviews</h2>
-                            {reviews.length > 0 ? (
-                                reviews.map((rev, index) => (
+
+
+                            {otherReviews.length > 0 ? (
+                                otherReviews.map((rev, index) => (
                                     <div key={index} className="border-b border-gray-300 py-4">
-                                        <div className='flex'>by<div className="font-bold ml-1">{rev.reviewer || 'Anonymous'}</div></div>
-                                        {/* <div className="text-gray-500">{rev.rating} stars</div> */}
-                                        <div className='flex'>
-                                            <div className="flex items-center mt-1">
-                                                {Array.from({ length: 5 }, (_, index) => (
-                                                    <svg
-                                                        key={index}
-                                                        fill={index < Math.round(rev.rating) ? "#ca8a04" : "gray"}
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        viewBox="0 0 24 24"
-                                                        className="w-3.5 h-3.5"
-                                                    >
-                                                        <path d="M12 .587l3.668 7.431 8.206 1.185-5.934 5.565 1.401 8.185L12 18.897l-7.341 3.85 1.401-8.185-5.934-5.565 8.206-1.185L12 .587z" />
-                                                    </svg>
-                                                ))}
-                                            </div>
-                                            <span className='ml-2 text-sm pt-1'>{formatDate(rev.createdAt)}</span>
+                                        <div className="font-bold">{rev.reviewer || 'Anonymous'}</div>
+                                        <div className="flex items-center mt-1">
+                                            {[...Array(5)].map((_, i) => (
+                                                <svg
+                                                    key={i}
+                                                    fill={i < rev.rating ? "#ca8a04" : "gray"}
+                                                    viewBox="0 0 24 24"
+                                                    className="w-5 h-5"
+                                                >
+                                                    <path d="M12 .587l3.668 7.431 8.206 1.185-5.934 5.565 1.401 8.185L12 18.897l-7.341 3.85 1.401-8.185-5.934-5.565 8.206-1.185L12 .587z" />
+                                                </svg>
+                                            ))}
+                                            <span className='ml-2 text-sm pt-0'>{formatDate(rev.createdAt)}</span>
                                         </div>
-                                        <div className='mt-2'>{rev.comment}</div>
+                                        
+                                        <p>{rev.comment}</p>
                                     </div>
                                 ))
                             ) : (
