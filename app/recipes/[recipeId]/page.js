@@ -149,7 +149,7 @@ const page = ({ params }) => {
                                     key={index}
                                     fill={index < Math.round(averageRating) ? "#ca8a04" : "gray"}
                                     xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
+                                    viewBox="0 0 23 23"
                                     className="w-5 h-5"
                                 >
                                     <path d="M12 .587l3.668 7.431 8.206 1.185-5.934 5.565 1.401 8.185L12 18.897l-7.341 3.85 1.401-8.185-5.934-5.565 8.206-1.185L12 .587z" />
@@ -180,7 +180,7 @@ const page = ({ params }) => {
                                                 onClick={() => setRating(star)}
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 fill={star <= rating ? "#ca8a04" : "gray"}
-                                                viewBox="0 0 24 24"
+                                                viewBox="0 0 23 23"
                                                 className="w-6 h-6 cursor-pointer"
                                             >
                                                 <path d="M12 .587l3.668 7.431 8.206 1.185-5.934 5.565 1.401 8.185L12 18.897l-7.341 3.85 1.401-8.185-5.934-5.565 8.206-1.185L12 .587z" />
@@ -219,7 +219,7 @@ const page = ({ params }) => {
                                         <svg
                                             key={i}
                                             fill={i < userReview.rating ? "#ca8a04" : "gray"}
-                                            viewBox="0 0 24 24"
+                                            viewBox="0 0 23 23"
                                             className="w-5 h-5"
                                         >
                                             <path d="M12 .587l3.668 7.431 8.206 1.185-5.934 5.565 1.401 8.185L12 18.897l-7.341 3.85 1.401-8.185-5.934-5.565 8.206-1.185L12 .587z" />
@@ -249,7 +249,7 @@ const page = ({ params }) => {
                                                     key={i}
                                                     fill={i < rev.rating ? "#ca8a04" : "gray"}
                                                     viewBox="0 0 24 24"
-                                                    className="w-5 h-5"
+                                                    className="w-4 h-4"
                                                 >
                                                     <path d="M12 .587l3.668 7.431 8.206 1.185-5.934 5.565 1.401 8.185L12 18.897l-7.341 3.85 1.401-8.185-5.934-5.565 8.206-1.185L12 .587z" />
                                                 </svg>
