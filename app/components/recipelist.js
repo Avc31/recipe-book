@@ -5,7 +5,7 @@ import Link from "next/link";
 import LoadingIcons from "react-loading-icons";
 
 const Recipelist = () => {
-    const [recipes, setRecipes] = useState([]);
+    const [recipes, setRecipes] = useState([]);  
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
 
