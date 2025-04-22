@@ -1,5 +1,4 @@
-// app/recipes/page.js or page.tsx
-import Recipelist from '../../components/Recipelist';
+import Recipelist from "../components/Recipelist";
 
 export default function RecipesPage() {
   return (
