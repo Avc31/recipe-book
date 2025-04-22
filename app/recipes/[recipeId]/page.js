@@ -7,7 +7,7 @@ import { jwtDecode } from 'jwt-decode';
 import { useRouter } from 'next/navigation';
 import { CiEdit } from "react-icons/ci";
 
-const page = ({ params }) => {
+const RecipesPage = ({ params }) => {
 
     const router = useRouter();
 
@@ -274,4 +274,3 @@ const page = ({ params }) => {
     );
 };
 
-export default page;
