@@ -1,7 +1,7 @@
 import React from 'react'
 import Recipelist from '../components/Recipelist'
 
-const Recipes = () => {
+const page = () => {
   return (
     <div>
       <div className="flex flex-wrap" >
@@ -11,4 +11,4 @@ const Recipes = () => {
   )
 }
 
-export default Recipes
+export default page
