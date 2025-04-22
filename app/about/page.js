@@ -11,10 +11,10 @@ const About = () => {
           Welcome to RecipeBook, your go-to platform for discovering, sharing, and creating delicious recipes. Our mission is to inspire home cooks and food enthusiasts to explore their culinary creativity.
         </p>
         <p className="text-lg text-gray-700 mb-4">
-          Whether you're looking for quick weeknight dinners, indulgent desserts, or healthy meal prep ideas, we have something for everyone. Our collection of recipes is curated from talented chefs and home cooks from around the world, ensuring that you'll find a variety of flavors and cuisines to satisfy your cravings.
+          Whether you&apos;re looking for quick weeknight dinners, indulgent desserts, or healthy meal prep ideas, we have something for everyone. Our collection of recipes is curated from talented chefs and home cooks from around the world, ensuring that you&apos;ll find a variety of flavors and cuisines to satisfy your cravings.
         </p>
         <p className="text-lg text-gray-700 mb-4">
-          Join our community, share your favorite recipes, and connect with fellow food lovers. Let's embark on this culinary journey together!
+          Join our community, share your favorite recipes, and connect with fellow food lovers. Let&apos;s embark on this culinary journey together!
         </p>
         <div className="mt-8 text-center">
           <h2 className="text-xl font-semibold text-gray-800">Happy Cooking!</h2>

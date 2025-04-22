@@ -16,7 +16,7 @@ const Home = () => {
         
         
         <div className="flex flex-col items-center mb-12">
-          <h3 className="text-xl font-bold text-center text-gray-800 mb-8">Today's Pick</h3>
+          <h3 className="text-xl font-bold text-center text-gray-800 mb-8">Today&apos;s Pick</h3>
           <div className="flex flex-wrap justify-center gap-6">
             <Featuredrecipes />
           </div>
