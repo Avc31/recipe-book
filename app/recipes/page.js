@@ -1,14 +1,13 @@
-import React from 'react'
-import Recipelist from '../components/Recipelist'
+// app/recipes/page.js or page.tsx
+import Recipelist from '../../components/Recipelist';
 
-const page = () => {
+export default function RecipesPage() {
   return (
-    <div>
-      <div className="flex flex-wrap" >
-      <Recipelist />
+    <main className="p-6">
+      <h1 className="text-2xl font-bold mb-4">All Recipes</h1>
+      <div className="flex flex-wrap">
+        <Recipelist />
       </div>
-    </div>
-  )
+    </main>
+  );
 }
-
-export default page
