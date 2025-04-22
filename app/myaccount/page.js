@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { jwtDecode } from "jwt-decode";
 import LoadingIcons from "react-loading-icons";
 
-const page = () => {
+const Myaccountpage = () => {
   const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
 
@@ -53,4 +53,3 @@ const page = () => {
   );
 };
 
-export default page;
