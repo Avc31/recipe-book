@@ -1,5 +1,5 @@
 import React from 'react'
-import Recipelist from '../components/Recipelist'
+import Recipelist from './components/Recipelist.js'
 
 const Recipes = () => {
   return (
