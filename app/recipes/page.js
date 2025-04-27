@@ -1,3 +1,5 @@
+"use client";
+
 import Recipelist from "../components/Recipelist";
 
 export default function RecipesPage() {
